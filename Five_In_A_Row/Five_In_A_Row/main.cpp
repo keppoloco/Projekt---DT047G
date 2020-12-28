@@ -1,10 +1,10 @@
-#include <SFML/Graphics.hpp>
+#include "DrawGrid.h"
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "Five in a row");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
+    sf::RenderWindow window(sf::VideoMode(1280, 720), "Five in a row");
+    //sf::CircleShape shape(100.f);
+    //shape.setFillColor(sf::Color::Green);
 
     while (window.isOpen())
     {
