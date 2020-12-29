@@ -146,11 +146,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DrawGrid.cpp" />
+    <ClCompile Include="Grid.cpp" />
+    <ClCompile Include="gridmanager.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DrawGrid.h" />
+    <ClInclude Include="Grid.h" />
+    <ClInclude Include="gridmanager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
