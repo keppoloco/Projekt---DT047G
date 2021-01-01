@@ -24,8 +24,6 @@ int main()
         GridManager::DrawTile(window, grid);
         GridManager::DrawMap(window, grid);
 
-
-
         window.display();
     }
 

@@ -34,3 +34,14 @@ std::vector<std::vector<sf::RectangleShape>> Grid::get_Map() const
 {
 	return tile_map;
 }
+
+/*float Grid::CalcTileSize(const sf::RenderWindow& w, int size)
+{
+	float i = sqrt(w.getSize().x * w.getSize().y / size);
+	float size_col = (w.getSize().x / i + 1);
+	float size_row = (w.getSize().y / i + 1);
+
+	static_cast<int>(size_col);
+	static_cast<int>(size_row);
+}
+*/

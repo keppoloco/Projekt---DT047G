@@ -1,1 +1,18 @@
-﻿  Five_In_A_Row.vcxproj -> C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Debug\Five_In_A_Row.exe
+﻿  Grid.cpp
+C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Five_In_A_Row\Grid.cpp(14,47): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Five_In_A_Row\Grid.cpp(14,40): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Five_In_A_Row\Grid.cpp(18,44): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Five_In_A_Row\Grid.cpp(18,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Five_In_A_Row\Grid.cpp(25,9): warning C4244: 'return': conversion from 'const float' to 'int', possible loss of data
+  gridmanager.cpp
+  main.cpp
+  Generating Code...
+  Five_In_A_Row.vcxproj -> C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Debug\Five_In_A_Row.exe
