@@ -5,13 +5,13 @@
 
 class boardItem {
 public:
-	virtual void SetSymbol() const = 0;
-	sf::Texture GetSymbol();
+	virtual void SetItem() const = 0;
+	sf::Texture GetItem() const { return item; };
 
 
 private:
-	sf::Sprite item;
-	sf::Texture symbol;
+	sf::Texture item;
+	std::vector<boardItem*> item_container;
 };
 
 

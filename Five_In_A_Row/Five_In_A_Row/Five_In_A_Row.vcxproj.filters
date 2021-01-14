@@ -24,12 +24,24 @@
     <ClCompile Include="gridmanager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="xboardpiece.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Grid.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="gridmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="boarditem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xboardpiece.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mouseinputhandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

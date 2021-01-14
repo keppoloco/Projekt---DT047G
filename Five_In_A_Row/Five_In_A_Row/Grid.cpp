@@ -1,9 +1,13 @@
 #include "Grid.h"
-
 void Grid::CreateTileMap()
 {
 	// Fetch size of board
 	int size_ = size();
+
+	// Get tile_ and fetch its size
+	auto maptile = get_Tile();
+
+	static_cast<sf::Vector2f>(maptile.getSize());
 
 	tile_map.resize(size_, std::vector<sf::RectangleShape>());
 
@@ -11,18 +15,18 @@ void Grid::CreateTileMap()
 		tile_map[x].resize(size_, sf::RectangleShape());
 		for (int y = 0; y < size_; y++)
 		{
-			tile_map[x][y].setSize(sf::Vector2f(size_, size_));
+			tile_map[x][y].setSize(sf::Vector2f(maptile.getSize().x, maptile.getSize().y));
 			tile_map[x][y].setFillColor(sf::Color::White);
 			tile_map[x][y].setOutlineThickness(1.0f);
 			tile_map[x][y].setOutlineColor(sf::Color::Black);
-			tile_map[x][y].setPosition(x * size_, y * size_);
+			tile_map[x][y].setPosition(x * maptile.getSize().x, y * maptile.getSize().y);
 		}
 	}
 }
 
 int Grid::size() const
 {
-	return tile_size;
+	return grid_size;
 }
 
 sf::RectangleShape Grid::get_Tile() const
@@ -34,14 +38,3 @@ std::vector<std::vector<sf::RectangleShape>> Grid::get_Map() const
 {
 	return tile_map;
 }
-
-/*float Grid::CalcTileSize(const sf::RenderWindow& w, int size)
-{
-	float i = sqrt(w.getSize().x * w.getSize().y / size);
-	float size_col = (w.getSize().x / i + 1);
-	float size_row = (w.getSize().y / i + 1);
-
-	static_cast<int>(size_col);
-	static_cast<int>(size_row);
-}
-*/

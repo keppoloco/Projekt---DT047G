@@ -149,10 +149,14 @@
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="gridmanager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="xboardpiece.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="boarditem.h" />
     <ClInclude Include="Grid.h" />
     <ClInclude Include="gridmanager.h" />
+    <ClInclude Include="mouseinputhandler.h" />
+    <ClInclude Include="xboardpiece.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
