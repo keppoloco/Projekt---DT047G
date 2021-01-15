@@ -14,6 +14,7 @@ public:
 		return coords;
 	};
 	void setSprite() { sprite.setTexture(item); }
+	void DrawSprite(sf::RenderWindow& window);
 
 private:
 	sf::Texture item;

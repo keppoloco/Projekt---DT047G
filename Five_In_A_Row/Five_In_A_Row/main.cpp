@@ -4,6 +4,10 @@
 #include <iostream>
 int main()
 {
+
+    sf::Sprite sprite;
+    bool hit = false;
+
     // width and height sizes for the application's window
     const int w_width = 1280;
     const int w_height = 720;
@@ -39,19 +43,30 @@ int main()
 
             if ( event.type == sf::Event::MouseButtonPressed && (gridPos.x < grid.size() && gridPos.y < grid.size()) )
             {
+                hit = true;
+                // Coordinates on pressed tile
                 std::cout << "grid-x: " << gridPos.x << '\n';
                 std::cout << "grid-y: " << gridPos.y << '\n';
 
-                boardItem* i = new itemX(gridPos);
+                /*boardItem* i = new itemX(gridPos);
                 auto map = grid.get_Map();
+
                 i->SetItem(map);
                 i->setSprite();
+                i->DrawSprite(window);*/
+                sf::Texture texture;
+                texture.loadFromFile("board_item_x.png", sf::IntRect(gridPos.x,gridPos.y, 30.f, 30.f));
+                texture.setSmooth(true);
+                texture.setRepeated(false);
+                sprite.setTexture(texture);
             }
         }
         window.clear();
 
+        // Render game elements
         GridManager::DrawMap(window, grid);
-
+        if (hit == true)
+            window.draw(sprite);
         window.display();
     }
 

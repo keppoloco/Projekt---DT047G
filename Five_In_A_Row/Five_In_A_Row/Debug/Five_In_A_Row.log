@@ -1,10 +1,12 @@
-﻿  xboardpiece.cpp
-C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Five_In_A_Row\xboardpiece.cpp(14,154): warning C4244: 'argument': conversion from 'float' to 'T', possible loss of data
+﻿  main.cpp
+C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Five_In_A_Row\main.cpp(44,76): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Five_In_A_Row\main.cpp(44,103): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Five_In_A_Row\main.cpp(58,97): warning C4244: 'argument': conversion from 'float' to 'T', possible loss of data
           with
           [
               T=int
           ]
-C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Five_In_A_Row\xboardpiece.cpp(14,149): warning C4244: 'argument': conversion from 'float' to 'T', possible loss of data
+C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Five_In_A_Row\main.cpp(58,91): warning C4244: 'argument': conversion from 'float' to 'T', possible loss of data
           with
           [
               T=int

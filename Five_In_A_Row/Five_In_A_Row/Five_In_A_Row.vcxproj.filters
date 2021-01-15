@@ -27,6 +27,9 @@
     <ClCompile Include="xboardpiece.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="boarditem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Grid.h">
@@ -39,9 +42,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="xboardpiece.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="mouseinputhandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
