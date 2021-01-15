@@ -21,7 +21,6 @@ int main()
 
     // initialize and create grid 10 x 10
     Grid grid(10);
-    grid.CreateTileMap();
 
     while (window.isOpen())
     {
@@ -55,7 +54,7 @@ int main()
                 i->setSprite();
                 i->DrawSprite(window);
                 */
-                texture.loadFromFile("resize.png");
+                texture.loadFromFile("board_item_x.png");
                 texture.setSmooth(true);
                 texture.setRepeated(false);
                 sprite.setPosition(sf::Vector2f(gridPos.x, gridPos.y));
@@ -66,8 +65,10 @@ int main()
 
         // Render game elements
         GridManager::DrawMap(window, grid);
-        if (hit)
+        if (hit) {
             window.draw(sprite);
+            //hit = false;
+        }
         window.display();
     }
 

@@ -7,9 +7,9 @@ class Grid {
 public:
 	Grid(int size) : grid_size(size) {
 		tile_.setSize(sf::Vector2f(tile_size, tile_size));
+		CreateTileMap();
 	}
 
-	void CreateTileMap();
 
 	sf::RectangleShape get_Tile() const;
 	std::vector<std::vector<sf::RectangleShape>> get_Map() const;
@@ -22,6 +22,8 @@ private:
 	const float tile_size = 50.f;
 	std::vector<std::vector<sf::RectangleShape>> tile_map;
 	sf::RectangleShape tile_;
+	void CreateTileMap();
+
 };
 
 
