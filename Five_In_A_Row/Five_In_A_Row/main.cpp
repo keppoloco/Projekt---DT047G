@@ -7,41 +7,50 @@ int main()
     const int w_width = 1280;
     const int w_height = 720;
 
+    sf::Vector2u gridPos;
+    sf::Vector2i wMousePos;
+    sf::Vector2f nMousePos;
+
     // create application window
     sf::RenderWindow window(sf::VideoMode(w_width, w_height), "Five in a row");
 
+    /*sf::View view;
+    view.setSize(w_width, w_height);
+    view.setCenter(window.getSize().x / 2.f, window.getSize().y / 2.f);*/
+
     // create grid 10 x 10
     Grid grid(10);
-
     grid.CreateTileMap();
-    int column = 0;
-    int row = 0;
+
     while (window.isOpen())
     {
+        wMousePos = sf::Mouse::getPosition(window);
+
+        nMousePos = window.mapPixelToCoords(wMousePos);
+        gridPos.x = static_cast<unsigned>(nMousePos.x / 50.f);
+        gridPos.y = static_cast<unsigned>(nMousePos.y / 50.f);
+
         sf::Event event;
         while (window.pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
                 window.close();
 
-            if (event.type == sf::Event::MouseButtonPressed &&
+           /* if (event.type == sf::Event::MouseButtonPressed &&
                 (event.mouseButton.button == sf::Mouse::Left ||
-                 event.mouseButton.button == sf::Mouse::Right))
+                 event.mouseButton.button == sf::Mouse::Right && (wMousePos.x < 500.f || wMousePos.y < 500.f)))*/
+            if ( event.type == sf::Event::MouseButtonPressed && (gridPos.x < grid.size() && gridPos.y < grid.size()) )
             {
-                sf::Vector2i position = sf::Mouse::getPosition();
-                sf::Vector2f wPosition = window.mapPixelToCoords(position);
-                column = wPosition.y / w_height * grid.size();
-                //row = wPosition.y / w_height * grid.size();
-                std::cout << "col: " << column << '\t' << "row: " << row << '\n';
+                std::cout << "grid-x: " << gridPos.x << '\n';
+                std::cout << "grid-y: " << gridPos.y << '\n';
             }
         }
-        sf::CircleShape circ(25.f);
-        circ.setFillColor(sf::Color::Green);
-        circ.setPosition(sf::Vector2f(float(column),0));
         window.clear();
-       
+       // window.setView(view);
+
+        //window.setView(window.getDefaultView());
+
         GridManager::DrawMap(window, grid);
-        window.draw(circ);
 
         window.display();
     }
