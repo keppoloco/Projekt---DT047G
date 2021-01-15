@@ -13,7 +13,7 @@ void itemX::SetItem(std::vector<std::vector<sf::RectangleShape>>& grid)
 	// name / file path for picture
 	std::string file_path = getItemName();
 
-	item.loadFromFile("board_item_x.png", sf::IntRect(pos.x, pos.y, 50.f, 50.f));
+	item.loadFromFile(file_path);
 
 	grid[pos.x][pos.y].setTexture(&item);
 }

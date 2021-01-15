@@ -6,8 +6,8 @@ int main()
 {
 
     sf::Sprite sprite;
+    sf::Texture texture;
     bool hit = false;
-
     // width and height sizes for the application's window
     const int w_width = 1280;
     const int w_height = 720;
@@ -48,16 +48,17 @@ int main()
                 std::cout << "grid-x: " << gridPos.x << '\n';
                 std::cout << "grid-y: " << gridPos.y << '\n';
 
-                /*boardItem* i = new itemX(gridPos);
+               /* boardItem* i = new itemX(gridPos);
                 auto map = grid.get_Map();
 
                 i->SetItem(map);
                 i->setSprite();
-                i->DrawSprite(window);*/
-                sf::Texture texture;
-                texture.loadFromFile("board_item_x.png", sf::IntRect(gridPos.x,gridPos.y, 30.f, 30.f));
+                i->DrawSprite(window);
+                */
+                texture.loadFromFile("resize.png");
                 texture.setSmooth(true);
                 texture.setRepeated(false);
+                sprite.setPosition(sf::Vector2f(gridPos.x, gridPos.y));
                 sprite.setTexture(texture);
             }
         }
@@ -65,7 +66,7 @@ int main()
 
         // Render game elements
         GridManager::DrawMap(window, grid);
-        if (hit == true)
+        if (hit)
             window.draw(sprite);
         window.display();
     }

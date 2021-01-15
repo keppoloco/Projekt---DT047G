@@ -1,14 +1,22 @@
 ﻿  main.cpp
 C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Five_In_A_Row\main.cpp(44,76): warning C4018: '<': signed/unsigned mismatch
 C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Five_In_A_Row\main.cpp(44,103): warning C4018: '<': signed/unsigned mismatch
-C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Five_In_A_Row\main.cpp(58,97): warning C4244: 'argument': conversion from 'float' to 'T', possible loss of data
+C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Five_In_A_Row\main.cpp(61,67): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
-              T=int
+              T=unsigned int
           ]
-C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Five_In_A_Row\main.cpp(58,91): warning C4244: 'argument': conversion from 'float' to 'T', possible loss of data
+          and
+          [
+              T=float
+          ]
+C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Five_In_A_Row\main.cpp(61,56): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
           with
           [
-              T=int
+              T=unsigned int
+          ]
+          and
+          [
+              T=float
           ]
   Five_In_A_Row.vcxproj -> C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Debug\Five_In_A_Row.exe
