@@ -14,7 +14,8 @@ int main()
     Grid grid(10);
 
     grid.CreateTileMap();
-
+    int column = 0;
+    int row = 0;
     while (window.isOpen())
     {
         sf::Event event;
@@ -27,14 +28,20 @@ int main()
                 (event.mouseButton.button == sf::Mouse::Left ||
                  event.mouseButton.button == sf::Mouse::Right))
             {
-                int column = (float)(event.mouseButton.y) / w_width * grid.get_Tile().getSize().y;
-                std::cout << column << '\n';
+                sf::Vector2i position = sf::Mouse::getPosition();
+                sf::Vector2f wPosition = window.mapPixelToCoords(position);
+                column = wPosition.y / w_height * grid.size();
+                //row = wPosition.y / w_height * grid.size();
+                std::cout << "col: " << column << '\t' << "row: " << row << '\n';
             }
         }
-
+        sf::CircleShape circ(25.f);
+        circ.setFillColor(sf::Color::Green);
+        circ.setPosition(sf::Vector2f(float(column),0));
         window.clear();
-
+       
         GridManager::DrawMap(window, grid);
+        window.draw(circ);
 
         window.display();
     }

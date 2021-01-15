@@ -19,7 +19,7 @@ public:
 
 private:
 	int grid_size;
-	const float tile_size = 100.f;
+	const float tile_size = 50.f;
 	std::vector<std::vector<sf::RectangleShape>> tile_map;
 	sf::RectangleShape tile_;
 };
