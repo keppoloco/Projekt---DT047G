@@ -1,11 +1,12 @@
 #include "Grid.h"
 #include "gridmanager.h"
 #include "xboardpiece.h"
+#include "application.h"
 #include <iostream>
 int main()
 {
-
-    sf::Sprite sprite;
+    app();
+/*    sf::Sprite sprite;
     sf::Texture texture;
     bool hit = false;
     // width and height sizes for the application's window
@@ -47,18 +48,19 @@ int main()
                 std::cout << "grid-x: " << gridPos.x << '\n';
                 std::cout << "grid-y: " << gridPos.y << '\n';
 
-               /* boardItem* i = new itemX(gridPos);
-                auto map = grid.get_Map();
+               // boardItem* i = new itemX(gridPos);
+                //auto map = grid.get_Map();
 
-                i->SetItem(map);
-                i->setSprite();
-                i->DrawSprite(window);
-                */
-                texture.loadFromFile("board_item_x.png");
-                texture.setSmooth(true);
-                texture.setRepeated(false);
-                sprite.setPosition(sf::Vector2f(gridPos.x, gridPos.y));
-                sprite.setTexture(texture);
+                
+                //i->SetItem(map);
+                //i->setSprite();
+                //i->DrawSprite(window);
+                
+                //texture.loadFromFile("board_item_x.png");
+               //texture.setSmooth(true);
+                //texture.setRepeated(false);
+                //sprite.setPosition(sf::Vector2f(gridPos.x, gridPos.y));
+                //sprite.setTexture(texture);
             }
         }
         window.clear();
@@ -71,6 +73,6 @@ int main()
         }
         window.display();
     }
-
+    */
     return 0;
 }
