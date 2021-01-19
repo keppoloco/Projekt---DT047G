@@ -24,13 +24,16 @@
     <ClCompile Include="gridmanager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="xboardpiece.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="boarditem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="inputmanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="positionconverter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,19 +41,19 @@
     <ClInclude Include="Grid.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="gridmanager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="boarditem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="xboardpiece.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="application.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="eventhandler.h">
+    <ClInclude Include="griddrawer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inputmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="positionconverter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

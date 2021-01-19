@@ -1,6 +1,5 @@
 #include "Grid.h"
-#include "gridmanager.h"
-#include "xboardpiece.h"
+#include "griddrawer.h"
 #include "application.h"
 #include <iostream>
 int main()

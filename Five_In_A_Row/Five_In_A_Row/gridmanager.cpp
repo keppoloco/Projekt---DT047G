@@ -1,6 +1,6 @@
-#include "gridmanager.h"
+#include "griddrawer.h"
 
-void GridManager::DrawMap(sf::RenderWindow& window, const Grid &g)
+void GridDrawer::DrawMap(sf::RenderWindow& window, const Grid &g)
 {
 	auto tile_map = g.get_Map();
 
@@ -12,7 +12,7 @@ void GridManager::DrawMap(sf::RenderWindow& window, const Grid &g)
 	}
 }
 
-void GridManager::DrawTile(sf::RenderWindow& window, const Grid& g)
+void GridDrawer::DrawTile(sf::RenderWindow& window, const Grid& g)
 {
 	window.draw(g.get_Tile());
 }

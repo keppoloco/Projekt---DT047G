@@ -148,18 +148,19 @@
   <ItemGroup>
     <ClCompile Include="application.cpp" />
     <ClCompile Include="boarditem.cpp" />
+    <ClCompile Include="positionconverter.cpp" />
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="gridmanager.cpp" />
+    <ClCompile Include="inputmanager.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="xboardpiece.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />
     <ClInclude Include="boarditem.h" />
-    <ClInclude Include="eventhandler.h" />
+    <ClInclude Include="positionconverter.h" />
     <ClInclude Include="Grid.h" />
-    <ClInclude Include="gridmanager.h" />
-    <ClInclude Include="xboardpiece.h" />
+    <ClInclude Include="griddrawer.h" />
+    <ClInclude Include="inputmanager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

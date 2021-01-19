@@ -2,8 +2,9 @@
 #ifndef APPLICATION_H
 #define APPLICATION_H
 #include <SFML/Graphics.hpp>
-#include "eventhandler.h"
-#include "gridmanager.h"
+#include "griddrawer.h"
+#include "inputmanager.h"
+#include <iostream>
 class app {
 public:
 	app() {
@@ -14,7 +15,7 @@ public:
 
 private:
 	sf::RenderWindow window;
-	handler<sf::Event> handle;
+	iManager handle;
 	const int w_width = 1280;
 	const int w_height = 720;
 	void start();

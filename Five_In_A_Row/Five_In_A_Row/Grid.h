@@ -2,19 +2,26 @@
 #ifndef GRID_H
 #define GRID_H
 #include <SFML/Graphics.hpp>
-#include "xboardpiece.h"
 class Grid {
 public:
-	Grid(int size) : grid_size(size) {
+	// Constructor taking size parameter
+	Grid(int size) : grid_size(size) 
+	{
+		// size of tiles in grid
 		tile_.setSize(sf::Vector2f(tile_size, tile_size));
+
+		// Create the tile map
 		CreateTileMap();
 	}
 
-
+	// Getters
 	sf::RectangleShape get_Tile() const;
-	std::vector<std::vector<sf::RectangleShape>> get_Map() const;
 
+	std::vector<std::vector<sf::RectangleShape>> get_Map() const;
+	
+	sf::Vector2f getTileSize() const;
 	int size() const;
+
 
 
 private:

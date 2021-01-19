@@ -1,4 +1,5 @@
 ﻿  application.cpp
+  gridmanager.cpp
   main.cpp
   Generating Code...
   Five_In_A_Row.vcxproj -> C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Debug\Five_In_A_Row.exe
