@@ -4,10 +4,9 @@
 #include <SFML/Graphics.hpp>
 class converter {
 public:
-	converter(const sf::Vector2i MousePosition) : wMousePos(MousePosition)
-	{
 
-	}
+	converter(const sf::Vector2i MousePosition) : wMousePos(MousePosition){}
+
 	void posToCoords(sf::RenderWindow &window);
 
 	void nCoordsToGridCoords(const sf::Vector2f& tile_size);

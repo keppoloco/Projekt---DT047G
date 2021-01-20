@@ -3,8 +3,7 @@
 void converter::posToCoords(sf::RenderWindow &window)
 {
 	// Normalize window mouse position to coordinates
-	nMousePos = window.mapPixelToCoords(wMousePos);
-	
+	nMousePos = window.mapPixelToCoords(wMousePos);	
 }
 
 void converter::nCoordsToGridCoords(const sf::Vector2f& tile_size)

@@ -8,7 +8,7 @@ public:
 
 	sf::Vector2i getMouseCoordinates(sf::RenderWindow &window);
 
-	bool isViablePlacement(const int grid_size,const sf::Vector2u Coordinates);
+	//bool isViablePlacement(const int grid_size,const sf::Vector2u Coordinates);
 
 private:
 

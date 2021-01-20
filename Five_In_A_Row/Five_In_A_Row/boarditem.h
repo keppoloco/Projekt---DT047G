@@ -6,6 +6,7 @@
 
 class boardItem {
 public:
+
 	boardItem(const sf::Vector2u &coords) : coords(coords) {}
 
 	sf::Texture GetItem() const { return item; }
@@ -13,10 +14,6 @@ public:
 	sf::Vector2u getCoords() const { return coords; }
 
 	virtual void SetItem(std::vector<std::vector<sf::RectangleShape>>& grid) = 0;
-
-	void setSprite() { sprite.setTexture(item); }
-
-	void DrawSprite(sf::RenderWindow& window);
 
 private:
 	sf::Texture item;

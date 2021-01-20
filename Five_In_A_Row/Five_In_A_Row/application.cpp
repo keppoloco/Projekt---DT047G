@@ -2,22 +2,11 @@
 #include "positionconverter.h"
 #include "boarditem.h"
 
-
-void addTextureOnTile(std::vector<std::vector<sf::RectangleShape>> &grid, const sf::Vector2u& coords)
-{
-	sf::Texture texture;
-	texture.loadFromFile("board_item_x.png");
-
-	grid[coords.x][coords.y].setTexture(&texture);
-}
-
-
 void app::start()
 {
 	// create grid
 	Grid grid(10);
-	sf::Texture texture;
-	sf::Sprite sprite;
+
 	while (window.isOpen())
 	{
 
@@ -31,6 +20,7 @@ void app::start()
 					break;
 				
 				case sf::Event::MouseButtonPressed:
+
 					converter converter(handle.getMouseCoordinates(window));
 
 					// Mouse position to normalized coordinates
@@ -39,25 +29,28 @@ void app::start()
 					// convert to grid coordinates
 					converter.nCoordsToGridCoords(grid.getTileSize());
 					
-					// Check if a tile has been clicked ALSO CHECK WHETHER TILE IS USED
-					if (handle.isViablePlacement(grid.size(), converter.getGridCoordinates()))
+					// control that input is legitimate and tile does not already have a texture
+					// on given coordinates
+					if ( controller.isViablePlacement( grid.size(), converter.getGridCoordinates() ) 
+						&& !controller.hasTextureSet(converter.getGridCoordinates()) )
 					{
+						// Coordinate is legitimate and doesn't have a texture set
+						controller.insertToMap(converter.getGridCoordinates());
+
 						std::cout << "x: " << converter.getGridCoordinates().x;
 						std::cout << " y: " << converter.getGridCoordinates().y << '\n';
 						
+
 						/* TODO: ADD ITEM TO TILE */
-						auto p = grid.get_Map();
-						addTextureOnTile(p, converter.getGridCoordinates());
+						
 					}
 					else {
 						std::cout << "Improper placement of item.\n";
 					}
-
-
 			}
 		}
 
-		//window.clear();
+		window.clear();
 
 		// Render game elements
 		GridDrawer::DrawMap(window, grid);
