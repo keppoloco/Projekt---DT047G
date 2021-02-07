@@ -1,6 +1,5 @@
 #include "application.h"
 #include "positionconverter.h"
-#include "boarditem.h"
 
 void app::start()
 {
@@ -32,7 +31,7 @@ void app::start()
 					// control that input is legitimate and tile does not already have a texture
 					// on given coordinates
 					if ( controller.isViablePlacement( grid.size(), converter.getGridCoordinates() ) 
-						&& !controller.hasTextureSet(converter.getGridCoordinates()) )
+						&& !controller.isExistingCoordinates(converter.getGridCoordinates()) )
 					{
 						// Coordinate is legitimate and doesn't have a texture set
 						controller.insertToMap(converter.getGridCoordinates());

@@ -3,6 +3,7 @@
 #define INPUTCONTROLLER_H
 #include <SFML/Graphics.hpp>
 #include <map>
+#include <utility>
 class iController {
 public:
 
@@ -11,14 +12,15 @@ public:
 
 	bool isViablePlacement(const int grid_size, const sf::Vector2u coords);
 
-	bool hasTextureSet(const sf::Vector2u coords);
+	bool isExistingCoordinates(const sf::Vector2u coords);
 
 	bool isEmptyMap() const;
 
 	void insertToMap(const sf::Vector2u coords);
 
 private:
-	std::map<sf::Vector2u, bool> gridMap;
+
+	std::map<std::pair<unsigned int, unsigned int>, bool> gridMap;
 
 };
 

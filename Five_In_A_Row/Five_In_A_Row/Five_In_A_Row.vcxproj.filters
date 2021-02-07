@@ -24,9 +24,6 @@
     <ClCompile Include="gridmanager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="boarditem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="application.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -36,12 +33,12 @@
     <ClCompile Include="positionconverter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="inputcontroller.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Grid.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="boarditem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="application.h">
@@ -54,6 +51,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="positionconverter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inputcontroller.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -147,7 +147,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="application.cpp" />
-    <ClCompile Include="boarditem.cpp" />
+    <ClCompile Include="inputcontroller.cpp" />
     <ClCompile Include="positionconverter.cpp" />
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="gridmanager.cpp" />
@@ -156,7 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.h" />
-    <ClInclude Include="boarditem.h" />
+    <ClInclude Include="inputcontroller.h" />
     <ClInclude Include="positionconverter.h" />
     <ClInclude Include="Grid.h" />
     <ClInclude Include="griddrawer.h" />

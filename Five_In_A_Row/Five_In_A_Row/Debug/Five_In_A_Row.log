@@ -1,5 +1,6 @@
 ﻿  application.cpp
-  gridmanager.cpp
-  main.cpp
+  inputcontroller.cpp
+C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Five_In_A_Row\inputcontroller.cpp(5,24): warning C4018: '<': signed/unsigned mismatch
+C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Five_In_A_Row\inputcontroller.cpp(5,53): warning C4018: '<': signed/unsigned mismatch
   Generating Code...
   Five_In_A_Row.vcxproj -> C:\Users\Tiimm\Documents\GitHub\Projekt---DT047G\Five_In_A_Row\Debug\Five_In_A_Row.exe
